@@ -8,19 +8,27 @@
 using namespace std;
 
 class barang{
+    private:
+    int kodeBarang;
+    string namaBarang;
+    
     public:
         //constructor dengan parameter
-        barang(int kodeBarang, string namaBarang);
+        barang(int kode, string nama){
+            kodeBarang = kode;
+            namaBarang = nama;
+        }
+
+        //fungsi menampilkan informasi
+        void cetakData(){
+            cout << "KODE BARANG : " << kodeBarang << endl;
+            cout << "NAMA BARANG : " << namaBarang << endl;
+        }
 };
-// Definisi constructor dgn parameter
-barang::barang(int kodeBarang, string namabarang){
-    cout << "Constructor Dengan Parameter Terpanggil" << endl;
-    cout << "KODE BARANG : " << kodeBarang << endl;
-    cout << "NAMA BARANG : " << namabarang << endl;
-}
 
 int main(){
     //memanggil constructor dgn parameter
     barang bg (001, "ROTI");
+    bg.cetakData();
     return 0;
 }
