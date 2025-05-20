@@ -14,17 +14,21 @@ class barang{
     
     public:
         //constructor dengan parameter
-        barang(int kode, string nama){
-            kodeBarang = kode;
-            namaBarang = nama;
-        }
+        barang(int kode, string nama);
 
         //fungsi menampilkan informasi
-        void cetakData(){
-            cout << "KODE BARANG : " << kodeBarang << endl;
-            cout << "NAMA BARANG : " << namaBarang << endl;
-        }
+        void cetakData();
 };
+
+barang::barang(int kode, string nama){
+    kodeBarang = kode;
+    namaBarang = nama;
+}
+//fungsi menampilkan informasi
+void barang::cetakData(){
+    cout << "KODE BARANG : " << kodeBarang << endl;
+    cout << "NAMA BARANG : " << namaBarang << endl;
+}
 
 int main(){
     //memanggil constructor dgn parameter
